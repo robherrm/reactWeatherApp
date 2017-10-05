@@ -50,7 +50,9 @@ class WeatherComponent extends React.Component {
   }
 
   componentDidMount() {
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=Bozeman&units=imperial&appid=3d6b633422451393e953dab4052ea0e4';
+    var jeanineapi = 'e6ea27b1c535e375f2f3ab9cfeab7df6';
+    var markapi = '3d6b633422451393e953dab4052ea0e4';
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=Bozeman&units=imperial&appid=' + jeanineapi;
     fetch(url).then(function (response) {
       return response.json();
     }).then((weatherObj) => {
